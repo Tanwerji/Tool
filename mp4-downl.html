@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Download MP4 videos in multiple sizes quickly and securely. 100% responsive and SEO-friendly.">
+  <meta name="keywords" content="MP4 download, video downloader, responsive tool, SEO optimized">
+  <meta name="author" content="Your Name">
+  <title>MP4 Video Downloader - Choose Your Size</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"
+     crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-blue-600 p-4 text-white text-center text-2xl font-bold shadow-md">
+    MP4 Video Downloader
+  </header>
+
+  <!-- Ad Unit Top -->
+  <div class="my-4 mx-auto max-w-3xl text-center">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+         data-ad-slot="[AD_UNIT_ID_HERE]"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <main class="max-w-xl mx-auto p-6 bg-white rounded-xl shadow-md mt-6">
+    <form id="downloadForm" class="space-y-4">
+      <label class="block text-lg font-semibold">Video URL:</label>
+      <input
+        type="url"
+        id="videoUrl"
+        placeholder="Enter video URL"
+        required
+        class="w-full border border-gray-300 p-2 rounded-md"
+      />
+
+      <label class="block text-lg font-semibold">Select Quality:</label>
+      <select id="quality" class="w-full border border-gray-300 p-2 rounded-md">
+        <option value="1080p">1080p HD</option>
+        <option value="720p">720p</option>
+        <option value="480p">480p</option>
+        <option value="360p">360p</option>
+      </select>
+
+      <button
+        type="submit"
+        class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+      >
+        Download MP4
+      </button>
+    </form>
+
+    <div id="result" class="mt-6 hidden">
+      <p class="mb-2 font-semibold">Download link for selected quality:</p>
+      <a
+        id="downloadLink"
+        href="#"
+        target="_blank"
+        class="text-blue-600 underline break-all"
+      ></a>
+    </div>
+  </main>
+
+  <!-- Ad Unit Bottom -->
+  <div class="my-6 mx-auto max-w-3xl text-center">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+         data-ad-slot="[AD_UNIT_ID_HERE]"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <footer class="text-center text-sm p-4 text-gray-500">
+    © 2025 MP4 Downloader. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("downloadForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const url = document.getElementById("videoUrl").value.trim();
+      const quality = document.getElementById("quality").value;
+
+      // Simulate a generated download link
+      const simulatedLink = `https://example.com/download?video=${encodeURIComponent(url)}&quality=${quality}`;
+
+      document.getElementById("result").classList.remove("hidden");
+      document.getElementById("downloadLink").href = simulatedLink;
+      document.getElementById("downloadLink").textContent = simulatedLink;
+    });
+  </script>
+</body>
+</html>
